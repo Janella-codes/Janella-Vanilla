@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -79,11 +83,11 @@ main {
   text-decoration: none;
 }
 
-article div {
+/*article div {
   display: flex;
   flex-direction: column;
   gap: 14px;
-}
+}*/
 
 article div ul {
   list-style-position: inside;
@@ -110,4 +114,32 @@ footer {
   .postCard {
     padding: 24px;
   }
+  ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+  }
 }
+
+@media (min-width: 120px) {
+  body {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .postsContainer {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .postCard {
+    padding: 12px;
+  }
+
+  ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+    width: fit-content;
+  }
+  
+}
+
